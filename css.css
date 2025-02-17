@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-image: url('/Users/sigab/Downloads/app/app/pngtree-simple-atmospheric-coupon-discount-promotion-background-picture-image_1318673.jpg'); /* Substitua 'caminho/da/imagem.jpg' pela URL da sua imagem */
+    background-size: cover; 
+    background-position: center; 
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    background: #ab1616;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #f39797;
+}
+
+
+
+
