@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('/Users/sigab/Downloads/app/app/oi.jpg');
+    background-image: url(oi.jpg);
     background-size: cover;
     background-position: center;
     flex-direction: column;

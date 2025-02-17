@@ -9,7 +9,7 @@ body {
     height: 100vh;
     background-color: #f4f4f4;
     text-align: center;
-    background-image: url('/Users/sigab/Downloads/app/app/pngtree-simple-atmospheric-coupon-discount-promotion-background-picture-image_1318673.jpg'); /* Substitua 'caminho/da/imagem.jpg' pela URL da sua imagem */
+    background-image: url(pngtree-simple-atmospheric-coupon-discount-promotion-background-picture-image_1318673.jpg); /* Substitua 'caminho/da/imagem.jpg' pela URL da sua imagem */
     background-size: cover; 
     background-position: center; 
 }

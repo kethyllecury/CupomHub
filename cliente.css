@@ -11,9 +11,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('/Users/sigab/Downloads/app/app/oi.jpg'); /* Substitua 'caminho/da/imagem.jpg' pela URL da sua imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem */
+    background-image: url(oi.jpg); 
+    background-size: cover; 
+    background-position: center; 
 }
 
 form {
