@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CupomHub</title>
-    <link rel="stylesheet" href="empresa.css"> <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="empresa.css"> 
 </head>
 <body>
     <a href="index.html" class="button voltar">Voltar</a>
@@ -19,6 +19,12 @@
         <label for="cnpj">CNPJ:</label>
         <input type="text" id="cnpj" name="cnpj" required pattern="\d{2}.\d{3}.\d{3}/\d{4}-\d{2}" placeholder="00.000.000/0000-00">
         
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirmar Senha:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
         <label for="contact">Telefone:</label>
         <input type="tel" id="contact" name="contact" required pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(00) 00000-0000">
         
@@ -37,10 +43,11 @@
         <ul id="couponList" class="coupon-list"></ul>
 
         <button type="submit">Cadastrar Empresa</button>
+
     </fieldset>
 </form>
 
-<script src="app.js"></script>
+<script src="empresa.js"></script>
 
 </body>
 </html>

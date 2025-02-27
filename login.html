@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessar Conta</title>
+    <link rel="stylesheet" href="cliente.css"> 
+</head>
+<body>
+    <a href="index.html" class="button voltar">Voltar</a>
+
+    <form id="loginForm" onsubmit="return validateForm()">
+        <fieldset>
+            <legend><strong>Login</strong></legend>
+            
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Acessar</button>
+        </fieldset>
+    </form>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

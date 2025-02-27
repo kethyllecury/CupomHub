@@ -5,7 +5,9 @@ function saveCompanyData(event) {
     const cnpj = document.getElementById('cnpj').value;
     const contact = document.getElementById('contact').value;
     const email = document.getElementById('email').value;
-    const discountCoupons = Array.from(document.getElementById('discountCoupons').selectedOptions).map(option => option.value);
+    const discountCoupons = Array.from(document.getElementById('discountCoupons').options)
+                                   .filter(option => !option.hasAttribute('data-removed'))
+                                   .map(option => option.value);
     const customCoupon = document.getElementById('customCoupon').value.trim();
 
     if (customCoupon) {
@@ -57,10 +59,11 @@ function updateCouponList() {
     const couponList = document.getElementById('couponList');
     const selectedOptions = Array.from(couponSelect.selectedOptions);
 
-    couponList.innerHTML = '';
+    couponList.innerHTML = ''; 
 
     selectedOptions.forEach(option => {
-        if (!Array.from(couponSelect.options).some(o => o.value === option.value && o.hasAttribute('data-default'))) {
+       
+        if (!option.hasAttribute('data-removed')) {
             const listItem = document.createElement('li');
             listItem.classList.add('coupon-item');
             listItem.textContent = option.text;
@@ -69,7 +72,9 @@ function updateCouponList() {
             removeButton.classList.add('remove-button');
             removeButton.textContent = 'Remover';
             removeButton.onclick = function() {
-                option.selected = false;
+               
+                option.setAttribute('data-removed', true);
+                option.style.display = 'none'; 
                 updateCouponList();
             };
             
@@ -79,5 +84,23 @@ function updateCouponList() {
     });
 }
 
-document.getElementById('discountCoupons').addEventListener('change', updateCouponList);
+function validatePasswords() {
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+    
+    if (password !== confirmPassword) {
+        alert("As senhas não coincidem. Por favor, tente novamente.");
+        return false;
+    }
+    return true;
+}
 
+document.getElementById('companyForm').onsubmit = function(event) {
+    if (!validatePasswords()) {
+        event.preventDefault();
+    } else {
+        return saveCompanyData(event); 
+    }
+};
+
+document.getElementById('discountCoupons').addEventListener('change', updateCouponList);
