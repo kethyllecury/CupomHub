@@ -1,3 +1,19 @@
+.button.voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #ab1616;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button.voltar:hover {
+    background: #f39797;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(oi.jpg);
+    background-image: url(tela1.jpg);
     background-size: cover;
     background-position: center;
     flex-direction: column;
@@ -18,7 +34,7 @@ form {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     margin-top: 20px;
 }
 

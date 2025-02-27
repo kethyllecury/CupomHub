@@ -7,15 +7,20 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     text-align: center;
-    background-image: url(pngtree-simple-atmospheric-coupon-discount-promotion-background-picture-image_1318673.jpg); /* Substitua 'caminho/da/imagem.jpg' pela URL da sua imagem */
+    background-image: url(tela1.jpg);
     background-size: cover; 
     background-position: center; 
 }
 
 h1 {
     margin-bottom: 20px;
+    color:#ffffff;
+}
+
+p {
+    color:#ffffff;
 }
 
 .button-container {
@@ -26,7 +31,7 @@ h1 {
 .button {
     background: #ab1616;
     color: white;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -38,6 +43,21 @@ h1 {
     background: #f39797;
 }
 
+.button-container .button:last-child {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    transform: translateX(-15%); 
+    
+}
 
 

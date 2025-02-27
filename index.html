@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CupomHub - Página Inicial</title>
-    <link rel="stylesheet" href="css.css"> 
+    <link rel="stylesheet" href="index.css"> 
+    <link rel="manifest" href="manifest.json">
+
 </head>
 <body>
+    <img src="logo.png" alt="Logo CupomHub" class="logo">
     <h1>Bem-vindo ao CupomHub</h1>
     <p>Escolha uma opção para continuar:</p>
     <div class="button-container">
-        <a href="app.html" class="button">Entrar como Empresa</a>
-        <a href="cliente.html" class="button">Entrar como Cliente</a> 
+        <a href="empresa.html" class="button">Cadastrar como Empresa</a>
+        <a href="cliente.html" class="button">Cadastrar como Cliente</a> 
+        <a href="login.html" class="button">Login</a>
     </div>
 </body>
+<script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker registrado!"))
+        .catch(err => console.log("Erro no registro do Service Worker", err));
+    }
+  </script>
 </html>
